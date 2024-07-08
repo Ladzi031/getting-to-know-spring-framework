@@ -1,0 +1,27 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	ns="https://wwww.springframework.org/schema/beans"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<start>
+		<ref name="beansContent" />
+	</start>
+	<define name="beansContent">
+		<element name="beans">
+			<ref name="beanContent" />
+		</element>
+	</define>
+	<define name="beanContent">
+		<element name="bean">
+			<oneOrMore>
+				<ref name="constructor-argContent" />
+			</oneOrMore>
+			<attribute name="id" />
+			<attribute name="class" />
+		</element>
+	</define>
+	<define name="constructor-argContent">
+		<element name="constructor-arg">
+			<attribute name="name" />
+			<attribute name="value" />
+		</element>
+	</define>
+</grammar>

@@ -1,0 +1,9 @@
+content_assist_autoactivation_triggers_java=<${.
+eclipse.preferences.version=1
+problem_classpath=warning
+problem_imports=warning
+problem_properties=ignore
+problem_security=warning
+problem_tasks=ignore
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

@@ -1,0 +1,21 @@
+package com.learn;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class ProductMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// instantiate the IoC container...
+		// get the bean information...
+		// use the bean
+		
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+		Product product = (Product) appContext.getBean("product");
+		System.out.print(product.getDescription());
+		
+	}
+
+}

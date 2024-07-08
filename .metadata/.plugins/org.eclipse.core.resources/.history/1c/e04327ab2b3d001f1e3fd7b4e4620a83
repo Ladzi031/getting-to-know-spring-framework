@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+		
+		<!-- here we are defining a bean and registering it with the application context-->
+      <bean id="product" class="com.learn.Product">
+            <constructor-arg  name="productId" value="A-123"/>
+            <constructor-arg  name="productName" value="Laptop"/>   
+            <constructor-arg  name="description" value="A laptop that is beautiful"/>
+       </bean>
+		<!-- name means full class path! -->
+		<bean id="myProduct" name="com.learn.Product">
+			<constructor-arg  name="productId" value="B-23" />
+			<constructor-arg name="productName" value="Smart-phone"/>
+			<constructor-arg name="description" value="what a smart phone!"/>
+		</bean>
+</beans>
+

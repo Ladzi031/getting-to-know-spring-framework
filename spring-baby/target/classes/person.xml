@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+  
+  <!-- 
+	order of constructor args matters here! and casting is done by spring for us!
+	
+	<bean id="person" class="com.learn.xmlconfig.Person">
+  		<constructor-arg name="id" value="1"/> 
+  		<constructor-arg name="name"  value="ladzani"/>
+  		<constructor-arg name="surname" value="Bengane"/>
+  	</bean> 
+  -->
+  <!--
+	 order of constructor args Does NOT since it's using indexes matters here! and casting is done by spring for us!
+	
+  		<bean id="person" class="com.learn.xmlconfig.Person">
+  		<constructor-arg index="1"  value="ladzani"/>
+  		<constructor-arg index="0" value="1"/>
+  		<constructor-arg index="2" value="Bengane"/>
+  	</bean>
+-->  
+  <!-- 
+	spring is able to infer the type in the constructor and inject the stuff for you
+	
+	<bean id="person" class="com.learn.xmlconfig.Person">
+  		<constructor-arg type="Integer" value="1"/> 
+  		<constructor-arg type="java.lang.String"  value="ladzani"/>
+  		<constructor-arg type="String" value="Bengane"/>
+  	</bean>
+  	
+  -->
+  
+  </beans>

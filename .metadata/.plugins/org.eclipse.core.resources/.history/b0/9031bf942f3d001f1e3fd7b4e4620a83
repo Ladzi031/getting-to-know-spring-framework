@@ -1,0 +1,16 @@
+package com.learn.autoconfig;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class ArtistMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ArtistConfig.class);
+		Artist artist = applicationContext.getBean(Artist.class);
+		System.out.println(artist.toString());
+		
+	}
+
+}

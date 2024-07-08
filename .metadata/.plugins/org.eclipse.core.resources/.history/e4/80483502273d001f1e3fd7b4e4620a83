@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="https://wwww.springframework.org/schema/beans">
+	<xs:element name="beans">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="bean">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="constructor-arg" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="name" use="required" />
+									<xs:attribute name="value" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" use="required" />
+						<xs:attribute name="class" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
