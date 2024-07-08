@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+  
+  <bean id="stranger" class="com.learn.xmlrefconfig.Stranger">
+  	<constructor-arg name=" name" value="nomnotho"/>
+  	<constructor-arg name="surname" value="bengane"/>
+  	<constructor-arg name="address"  ref="address"/>
+ <!-- note the ref attribute to refer to a user defined object, that is instantiated in the Stranger object, it als has to be injected! -->
+  </bean>
+ 
+ <!-- property tag means setter xml based injection --> 
+  <bean id="address" class="com.learn.xmlrefconfig.Address">
+  	<constructor-arg name="street" value="tsatsinyane street" />
+  	<constructor-arg name="pobox" value="1818"/>
+  </bean>
+</beans>

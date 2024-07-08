@@ -1,0 +1,7 @@
+package com.learn.xmlrefconfig;
+
+public class Address {
+	private String street;
+	private Integer pobox;
+	
+}
