@@ -1,0 +1,5 @@
+package com.learn.dependson;
+
+public class InitializerDependent {
+
+}

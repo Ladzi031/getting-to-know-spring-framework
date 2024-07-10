@@ -1,0 +1,5 @@
+package com.learn.propertymerging;
+
+public abstract class Details {
+
+}

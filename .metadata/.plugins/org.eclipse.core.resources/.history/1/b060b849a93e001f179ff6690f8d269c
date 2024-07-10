@@ -1,0 +1,17 @@
+package com.learn.javacollection;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class CollectionHolderMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("javacollection.xml");
+		CollectionHolder collectionHolder = applicationContext.getBean(CollectionHolder.class);
+		collectionHolder.getMyList().forEach( (item) -> {
+			System.out.println(item);
+		});
+	}
+
+}

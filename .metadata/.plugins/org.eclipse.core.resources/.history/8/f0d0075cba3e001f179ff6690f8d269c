@@ -1,0 +1,5 @@
+package com.learn.propertymerging;
+
+public class EmailDetails extends Details {
+
+}

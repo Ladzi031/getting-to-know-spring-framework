@@ -1,0 +1,86 @@
+package com.learn.codewars;
+
+import java.util.*;
+
+import javax.xml.stream.events.Characters;
+
+import static java.util.Map.entry;
+
+public class CodeWars {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s  = "az";
+		System.out.println(solve(s));
+	}
+	
+	public static int solve(final String s) {
+
+	      // oh my word, won't be the most beautiful code out there!
+	        Map<String, Integer> lettersMap = Map.ofEntries(
+	    entry("a", 1),
+	    entry("b", 2),
+	      entry("c", 3),
+	      entry("d", 4),
+	    entry("e", 5),
+	    entry("f", 6),
+	    entry("g", 7),
+	    entry("h", 8),
+	    entry("i", 9),
+	    entry("j", 10),
+	    entry("k", 11),
+	    entry("l", 12),
+	    entry("m", 13),
+	    entry("n", 14),
+	    entry("o", 15),
+	    entry("p", 16),
+	    entry("q", 17),
+	    entry("r", 18),
+	    entry("s", 19),
+	    entry("t", 20),
+	    entry("u", 21),
+	    entry("v", 22),
+	    entry("w", 23),
+	    entry("x", 24),
+	    entry("y", 25),
+	    entry("z", 26)    
+	);
+	      String k = s
+	        .replaceAll("a", "*")
+	        .replaceAll("e", "*")
+	        .replaceAll("i", "*")
+	        .replaceAll("o", "*")
+	        .replaceAll("u", "*");
+	      Iterator<String> wordArr = Arrays.asList(k.split("")).iterator();
+	        
+	      Integer maxSum = 0;
+	      Integer curSum = 0; // reset        
+	       List<Integer> num = new ArrayList<>();
+    
+    while(wordArr.hasNext()) {
+	        String x  = wordArr.next();
+      System.out.println("in loop: "+ x);
+        if(! x.equals("*")) {
+          curSum += lettersMap.get(x); 
+        }else {
+          if(curSum != 0) { 
+             num.add(curSum); 
+          }
+          curSum = 0; // reset this baby!
+        }
+	  }
+    
+    
+	        Collections.sort(num);
+    System.out.println("word "+s);
+    System.out.println("c_word "+ k);
+    num.forEach((e) -> {System.out.print(" "+ e + " ");});
+    int index = num.size() - 1;
+    System.out.println("returning :"+ num.get(index));
+    
+    if(num.size() == 1) {
+      return num.get(0);
+    }
+	    return num.get(index);
+	}
+}

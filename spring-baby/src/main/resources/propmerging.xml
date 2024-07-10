@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+  
+  
+  <bean id="details" abstract="true" class="com.learn.propertymerging.Details">
+  <property name="details">
+  	<props>
+  		<prop key="username">Farooq</prop>
+  	</props>
+  </property>
+  </bean>
+  
+  <bean id="emailDetails" parent="details" class="com.learn.propertymerging.EmailDetails">
+  	<property name="details">
+  		<props merge="true">
+  			<prop key="password">slowCoach</prop>
+  		</props>
+  	</property>
+  </bean>
+  
+  </beans>

@@ -1,0 +1,10 @@
+package com.learn.codewars;
+
+public class CodeWars {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s  = "zodiac";
+		System.out.print("answer : "+s.substring(s.length()  - 1  ) );
+	}
+}
