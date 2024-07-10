@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+ 
+ <bean id="person" class="com.learn.autobyname.Person" autowire="byName">
+ <property  name="name" value="ladzani"/>
+ <property  name="surname" value="Bengane"/>
+ </bean>
+ <bean id="address" class="com.learn.autobyname.Address">
+  <constructor-arg  name="street" value="phiri"/>
+ </bean>
+
+  </beans>
+  
+  <!--
+	
+	with auto-wire tag we simply leave it to spring to inject dependencies for a bean...
+	
+	autowire byName seems to be working via setter based injection, maybe that's how its designed to be idk! 
+	
+	some notes to take care of here: 
+	when we autowire some beans (collabotories) to some bean and we use the auto-wire machinery...
+	,we are living the dependency injection to be done by spring container... 
+	so when we invoke the bean or when the container reads the DD/xml file spring now scans every bean
+	and the ones that have the autowire tags are then evaluated...
+	by default spring has four modes of autowiring: 
+	 1. NO (this is the default)
+	 2. byName (this type of wiring is when spring...
+	  looks at the beans declared name in the constructor/ property and looks for a bean in the xml/DD for a bean with that particular name
+	  if found it injects it the bean when not found it sets it to null... note no exception is thrown with autowiring by name when the required bean is not found
+	  might be prone to NPE)
+	  3. byType
+	  4. constructor
+	  
+	   
+	  we can also do some cool stuff by setting restrictions on particular bean to not be eligeble for autowiring... with the autowire-candidate="false"
+	  this means now this bean should not be "ref" or reference via the autowiring mechanism that spring container provides
+	  byType and constructor modes are better in that they throw exceptions when they don't find the bean in question,
+	  so the particular bean won't be initialised and as a result the application will not reach it's fully initialised state
+	  another draw back is that autowiring is not explicit in the xml file, you can't get the full picture of a particular...
+	  that has an autowire tag in it... for large application, that need clarity and the very professional systems where a lot of people are 
+	  working on it can be a problem! so use these with cautions: "the right tool for the right job!"
+  -->

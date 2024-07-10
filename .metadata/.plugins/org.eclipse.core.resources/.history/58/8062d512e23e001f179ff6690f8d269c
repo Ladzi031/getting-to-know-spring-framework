@@ -1,0 +1,14 @@
+package com.learn.autobyname;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class AutoByNameMain {
+
+	public static void main(String[] args) {
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("autobyname.xml");
+		System.out.println(((Person)ctx.getBean("person")).getName());
+		System.out.print(((Person)ctx.getBean("person")).getAddress().getStreet());
+	}
+
+}

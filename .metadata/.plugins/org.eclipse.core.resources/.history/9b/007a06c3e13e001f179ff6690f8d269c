@@ -1,0 +1,10 @@
+package com.learn.autobyname;
+
+public class AutoByNameMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
