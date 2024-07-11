@@ -9,6 +9,10 @@
     <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
     <fullyQualifiedTypeName name="com.learn.autoconfig.Artist"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="com.learn.javacollection.CollectionHolder"/>
+    <fullyQualifiedTypeName name="com.learn.propertymerging.EmailDetails"/>
+    <fullyQualifiedTypeName name="com.learn.dependson.Initializer"/>
+    <fullyQualifiedTypeName name="com.learn.dependson.InitializerDependent"/>
     <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
     <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
 </qualifiedTypeNameHistroy>

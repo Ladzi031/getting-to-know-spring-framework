@@ -9,7 +9,7 @@
  </bean>
  <bean id="address" class="com.learn.autobyname.Address">
   <constructor-arg  name="street" value="phiri"/>
- </bean>
+  </bean>
 
   </beans>
   
