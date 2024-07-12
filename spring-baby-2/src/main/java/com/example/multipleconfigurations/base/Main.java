@@ -10,5 +10,5 @@ public class Main {
     }
 
     // the @Value can be used to join beans declared in a two different configuration files
-    // also note that AnnotationConfigApplicationApplicationContext takes varArgs...
+    //   also note that AnnotationConfigApplicationApplicationContext takes varArgs...
 }

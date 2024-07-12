@@ -15,4 +15,5 @@
     <fullyQualifiedTypeName name="com.learn.dependson.InitializerDependent"/>
     <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
     <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="com.learn.autobyconstructor.PersonByConstructor"/>
 </qualifiedTypeNameHistroy>
