@@ -5,7 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext ctx = new AnnotationConfigApplicationContext(ArtistConfiguration.class, InstrumentConfiguration.class);
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(ArtistConfiguration.class);
         System.out.println(ctx.getBean(Artist.class).toString());
     }
 
