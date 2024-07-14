@@ -23,6 +23,4 @@ public class ReaderConfiguration {
     public Reader fileReader() {
         return reader().createReader(ReaderType.FILE_READER);
     }
-
-
 }
