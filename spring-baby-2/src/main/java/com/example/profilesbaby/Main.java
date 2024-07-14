@@ -6,7 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext();
-        new AnnotationConfigApplicationContext().getEnvironment().setP
+        new AnnotationConfigApplicationContext().getEnvironment();
         applicationContext.getBean("databaseConfigurationHandler", DatabaseConfigurationHandler.class).print();
     }
 }
