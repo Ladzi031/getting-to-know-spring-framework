@@ -1,14 +1,13 @@
-package com.ladzani.quickstart;
-
+package com.example.RESTful.mastery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 @SpringBootApplication
-public class QuickstartApplication  {
+public class ResTfulMasteryApplication {
+
 	public static void main(String[] args) {
-		SpringApplication.run(QuickstartApplication.class, args);
+		SpringApplication.run(ResTfulMasteryApplication.class, args);
 	}
 
 }
